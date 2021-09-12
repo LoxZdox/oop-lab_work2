@@ -6,28 +6,39 @@ using System.Threading.Tasks;
 
 namespace lab_work_2
 {
-
     public class Class1{
-        public int age1;
-        public int age2;
-        public string name;
-
-        public Class1(int age, string name) {
-            this.name = name;
-            this.age1 = age1;
+        int numberone = 0;
+        int numbertwo = 0;
+        public int somestrangenumber{
+            get{
+                return numberone;
+            }
+            set{
+                numberone = value;
+            }
+        }
+        public int anothernumber{
+            get{
+                return numbertwo;
+            }
+            set{
+                numbertwo = value;
+            }
         }
     }
     class Program
     {
         static void Main(string[] args)
         {
-            Class1 ob1 = new Class1(5, "Даня");
-            Console.WriteLine("Сколько тебе лет?");
-            ob1.age1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("А тебе?");
-            ob1.age2 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine($"{ob1.name} малявка, потому что ему {ob1.age1} лет.");
-            Console.WriteLine($"{ob2.name} старушька- пердушька {ob1.age2}-ти летняя.");
+            int temporary = 0;
+            Class1 obj = new Class1();
+            obj.somestrangenumber = Convert.ToInt32(Console.ReadLine());
+            obj.anothernumber = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"Number 1: {obj.somestrangenumber}, number 2: {obj.anothernumber}");
+            temporary = obj.somestrangenumber;
+            obj.somestrangenumber = obj.anothernumber;
+            obj.anothernumber = temporary;
+            Console.WriteLine($"New number 1: {obj.somestrangenumber}, new number 2: {obj.anothernumber}");
         }
     }
 }
