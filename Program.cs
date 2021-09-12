@@ -5,40 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace lab_work_2
+
 {
-    public class Class1{
-        int numberone = 0;
-        int numbertwo = 0;
-        public int somestrangenumber{
-            get{
-                return numberone;
-            }
-            set{
-                numberone = value;
-            }
-        }
-        public int anothernumber{
-            get{
-                return numbertwo;
-            }
-            set{
-                numbertwo = value;
-            }
-        }
-    }
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            int temporary = 0;
-            Class1 obj = new Class1();
-            obj.somestrangenumber = Convert.ToInt32(Console.ReadLine());
-            obj.anothernumber = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine($"Number 1: {obj.somestrangenumber}, number 2: {obj.anothernumber}");
-            temporary = obj.somestrangenumber;
-            obj.somestrangenumber = obj.anothernumber;
-            obj.anothernumber = temporary;
-            Console.WriteLine($"New number 1: {obj.somestrangenumber}, new number 2: {obj.anothernumber}");
+            lab_work_2.Class1 obj1 = new lab_work_2.Class1();
+            lab_work_2.Class2 obj2 = new lab_work_2.Class2();
+            obj1.somestrangenumber = Convert.ToInt32(Console.ReadLine());
+            obj1.anothernumber = Convert.ToInt32(Console.ReadLine());
+            obj1.swap(ref obj1.numberone, ref obj1.numbertwo);
+            Console.WriteLine($"Sum of numbers: {obj2.sum(ref obj2.firstnum, ref obj2.secondnum)}");
         }
     }
 }
