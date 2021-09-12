@@ -24,6 +24,7 @@ namespace lab_work_2
                 max = firstarray[i];
                 min = firstarray[i];
             }
+            Console.WriteLine("Here`s your elements: ");
             for(int i = 0; i < 5; i++){
                 if(max<=firstarray[i]){
                     max = firstarray[i];
@@ -31,8 +32,9 @@ namespace lab_work_2
                 if(min>=firstarray[i]){
                     min = firstarray[i];
                 }
+                Console.Write($"{firstarray[i]}, ");
             }
-            Console.WriteLine($"Max integer: {max}, min integer: {min}");
+            Console.WriteLine($"\nMax integer: {max}, min integer: {min}");
         }
     }
 }
