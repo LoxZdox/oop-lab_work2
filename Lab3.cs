@@ -21,6 +21,10 @@ namespace lab_work_2
             int max = 0 ,min = 0;
             for(int i = 0; i < 5; i++){
                 firstarray[i] = Convert.ToInt32(Console.ReadLine());
+                max = firstarray[i];
+                min = firstarray[i];
+            }
+            for(int i = 0; i < 5; i++){
                 if(max<=firstarray[i]){
                     max = firstarray[i];
                 }
@@ -28,7 +32,7 @@ namespace lab_work_2
                     min = firstarray[i];
                 }
             }
-            Console.WriteLine("Ты умничка.");
+            Console.WriteLine($"Max integer: {max}, min integer: {min}");
         }
     }
 }
