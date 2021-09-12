@@ -14,6 +14,7 @@ namespace lab_work_2
             lab_work_2.Class1 obj1 = new lab_work_2.Class1();
             lab_work_2.Class2 obj2 = new lab_work_2.Class2();
             lab_work_2.Class3 obj3 = new lab_work_2.Class3();
+            lab_work_2.Class4 obj4 = new lab_work_2.Class4();
 
             obj1.somestrangenumber = Convert.ToInt32(Console.ReadLine());
             obj1.anothernumber = Convert.ToInt32(Console.ReadLine());
@@ -22,7 +23,8 @@ namespace lab_work_2
             Console.WriteLine($"Sum of numbers: {obj2.sum(ref obj2.firstnum, ref obj2.secondnum)}");
             //End of lab-2
             obj3.maxmin();
-
+            //End of lab-3
+            obj4.sumaver();
         }
     }
 }
