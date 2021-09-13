@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace lab_work_2
 {
-    public class Class4{
+    public class Class5
+    {
         public int[] array = new int[5];
         public int this[int i]{
             get{
@@ -16,30 +17,21 @@ namespace lab_work_2
                 array[i] = value;
             }
         }
-        int sum = 0;
-        int aver = 0;
-        public int sumof{
-            get{
-                return sum;
-            }
-        }
-        public int averof{
-            get{
-                return aver;
-            }
-        }
-        public void sumaver(){
+        int temp = 0;
+        public void sort(){
             for(int i = 0; i < 5; i++){
-                array[i] = Convert.ToInt32(Console.ReadLine());
-                sum = sum + array[i];
-                aver = aver + 1;
+                array[i]=Convert.ToInt32(Console.ReadLine());
+                temp = array[i];
             }
-            aver = sum/aver;
             Console.WriteLine("Here`s your elements: ");
             for(int i = 0; i < 5; i++){
                 Console.Write($"{array[i]}, ");
             }
-            Console.WriteLine($"\nSum of elements: {sum}, aver value of elements: {aver}.");
+            for(int i = 0; i<5; i++){
+                if(array[i]<=temp){
+                    
+                }
+            }
         }
     }
 }

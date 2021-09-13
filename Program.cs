@@ -15,6 +15,7 @@ namespace lab_work_2
             lab_work_2.Class2 obj2 = new lab_work_2.Class2();
             lab_work_2.Class3 obj3 = new lab_work_2.Class3();
             lab_work_2.Class4 obj4 = new lab_work_2.Class4();
+            lab_work_2.Class5 obj5 = new lab_work_2.Class5();
 
             obj1.somestrangenumber = Convert.ToInt32(Console.ReadLine());
             obj1.anothernumber = Convert.ToInt32(Console.ReadLine());
@@ -25,6 +26,8 @@ namespace lab_work_2
             obj3.maxmin();
             //End of lab-3
             obj4.sumaver();
+            //End of lab-4
+            obj5.sort();
         }
     }
 }
