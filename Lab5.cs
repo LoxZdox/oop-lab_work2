@@ -17,7 +17,7 @@ namespace lab_work_2
                 array[i] = value;
             }
         }
-        int temp = 0;
+        int temp = 0, min = 0, max = 0;
         public void sort(){
             for(int i = 0; i < 5; i++){
                 array[i]=Convert.ToInt32(Console.ReadLine());
@@ -27,10 +27,19 @@ namespace lab_work_2
             for(int i = 0; i < 5; i++){
                 Console.Write($"{array[i]}, ");
             }
-            for(int i = 0; i<5; i++){
-                if(array[i]<=temp){
-                    
+            //This is bubble sort, so the second cycle is for the worst scenario. O(n^2)
+            for(int j = 0; j < 5; j++){
+                for(int i = 0; i+1 < 5; i++){
+                    if(array[i]>=array[i+1]){
+                        temp = array[i];
+                        array[i] = array[i+1];
+                        array[i+1] = temp;
+                    }
                 }
+            }
+            Console.WriteLine("Here`s your sorted elements: ");
+            for(int i = 0; i < 5; i++){
+                Console.Write($"{array[i]}, ");
             }
         }
     }
