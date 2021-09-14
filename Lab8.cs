@@ -26,12 +26,23 @@ namespace lab_work_2
             aver = sum/aver;
             for(int i = 0; i+1 < 10; i++){
                 if((aver-array[i]>=0)&&(aver-array[i+1]>=0)){
-                    if(aver-array[i]<aver-array[i+1]){
+                    if(aver-array[i]<=aver-array[i+1]){
                         diff = array[i];
                         sum = i;
                     }
-                }else{
-                    if(aver-array[i]>=aver-array[i+1]){
+                }else if((aver-array[i]>=0)&&(aver-array[i+1]<0)){
+                    if(aver-array[i]>(-1*(aver-array[i+1]))){
+                        diff = array[i];
+                        sum = i;
+                    }
+                }else if((aver-array[i]<0)&&(aver-array[i+1]>=0)){
+                    if(-1*(aver-array[i])>(aver-array[i+1])){
+                        diff = array[i];
+                        sum = i;
+                    }
+                }
+                else{
+                    if(-1*(aver-array[i])>(-1*(aver-array[i+1]))){
                         diff = array[i];
                         sum = i;
                     }
