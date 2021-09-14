@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace lab_work_2
 {
-    public class Class5
-    {
+    public class Class5{
         public int[] array = new int[5];
         public int this[int i]{
             get{
