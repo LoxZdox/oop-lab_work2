@@ -11,7 +11,8 @@ namespace lab_work_2
     {
         public static void Main(string[] args)
         {
-            Console.Write("Ну ты глупая.");
+            Class1 obj = new Class1();
+            Console.WriteLine($"Дане {obj.age} лет. {obj.name}- малявка.");
         }
     }
 }
