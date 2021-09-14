@@ -20,6 +20,7 @@ namespace lab_work_2
             lab_work_2.Class7 obj71 = new lab_work_2.Class7();
             lab_work_2.Class7 obj72 = new lab_work_2.Class7();
             lab_work_2.Class7 obj73 = new lab_work_2.Class7();
+            lab_work_2.Class8 obj8 = new lab_work_2.Class8();
 
             // obj1.somestrangenumber = Convert.ToInt32(Console.ReadLine());
             // obj1.anothernumber = Convert.ToInt32(Console.ReadLine());
@@ -42,6 +43,9 @@ namespace lab_work_2
                 obj73.array[i] = obj71.array[i] + obj72.array[i];
                 Console.Write($"{obj73.array[i]}, ");
             }
+             Console.Write(".\n");
+            //End of lab-7
+            obj8.findaveragest();
         }
     }
 }
